@@ -1,0 +1,32 @@
+[33m
+🧪 STARTING INTEGRATION TESTS[0m
+[33m================================
+[0m
+[36mStarting server...[0m
+Server running on http://localhost:3000
+WebSocket server ready
+[32m✓ Server started successfully
+[0m
+[36m
+📋 Testing Session Creation[0m
+[32m  ✓ POST /api/session creates a new session[0m
+[32m  ✓ Session ID is unique for each request[0m
+[32m  ✓ Session URL contains session parameter[0m
+[36m
+🔍 Testing Session Retrieval[0m
+[32m  ✓ GET /api/session/:id returns session info[0m
+[32m  ✓ GET /api/session/:id returns 404 for non-existent session[0m
+[32m  ✓ Session contains correct initial data[0m
+[36m
+🔌 Testing WebSocket Connection[0m
+[32m  ✓ WebSocket connects successfully[0m
+[32m  ✓ Server closes connection on invalid join[0m
+[36m
+🔄 Testing Code Synchronization[0m
+[32m  ✓ Client receives code on join[0m
+[32m  ✓ Code changes broadcast to all clients[0m
+[36m
+🌐 Testing Language Change[0m
+[32m  ✓ Language change broadcasts to all clients[0m
+[36m
+👥 Testing User Tracking[0m

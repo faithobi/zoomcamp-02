@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Coding Interview Platform</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-content">
+                <h1>🚀 Coding Interview Platform</h1>
+                <div class="header-actions">
+                    <div id="sessionInfo" class="session-info">
+                        <span id="sessionId" class="session-id">Loading...</span>
+                        <button id="copyLink" class="btn btn-secondary" title="Copy session link">📋 Copy Link</button>
+                    </div>
+                    <div id="userCount" class="user-count">Connected: 0</div>
+                </div>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <div class="editor-section">
+                <div class="editor-header">
+                    <div class="language-selector">
+                        <label for="language">Language:</label>
+                        <select id="language">
+                            <option value="javascript">JavaScript</option>
+                            <option value="python">Python</option>
+                            <option value="java">Java</option>
+                            <option value="cpp">C++</option>
+                            <option value="html">HTML</option>
+                            <option value="css">CSS</option>
+                            <option value="sql">SQL</option>
+                        </select>
+                    </div>
+                    <button id="executeBtn" class="btn btn-primary">▶ Execute Code</button>
+                </div>
+
+                <div class="editor-container">
+                    <textarea id="codeEditor" placeholder="Write your code here..." spellcheck="false"></textarea>
+                    <pre id="highlightedCode"><code id="highlightCode" class="language-javascript"></code></pre>
+                </div>
+            </div>
+
+            <div class="output-section">
+                <div class="output-header">
+                    <h3>Output</h3>
+                    <button id="clearOutput" class="btn btn-secondary btn-small">Clear</button>
+                </div>
+                <div id="output" class="output-container">
+                    <p class="placeholder">Output will appear here...</p>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>Real-time collaborative coding for interviews</p>
+        </footer>
+    </div>
+
+    <!-- Copy notification -->
+    <div id="notification" class="notification"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <!-- Pyodide for Python WASM execution -->
+    <script async src="https://cdn.jsdelivr.net/pyodide/v0.23.4/full/pyodide.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
